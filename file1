@@ -1,0 +1,26 @@
+class Fibonacci {
+  public int fib(int n) {
+    // base case: if n is 0, return 0
+    if (n == 0) {
+      return 0;
+    }
+
+    // initialize the previous, current, and next values
+    int previous = 0;
+    int current = 1;
+    int next = 0;
+
+    // loop through the remaining values of the sequence
+    for (int i = 1; i < n; i++) {
+      // calculate the next value in the sequence
+      next = previous + current;
+
+      // update the previous and current values
+      previous = current;
+      current = next;
+    }
+
+    // return the current value
+    return current;
+  }
+}
